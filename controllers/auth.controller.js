@@ -10,6 +10,7 @@ const { differenceInSeconds } = require('date-fns')
 const { sendSMS } = require('../utils/sms')
 const Resturant = require('../models/Resturant')
 const Customer = require('../models/Customer')
+const Rider = require('../models/Rider')
 
 
 exports.registerAdmin = asyncHandler(async (req, res) => {
@@ -210,6 +211,7 @@ exports.logoutCustomer = asyncHandler(async (req, res) => {
 })
 exports.loginRider = asyncHandler(async (req, res) => {
     const { userName, password } = req.body
+console.log(req.body);
 
     const result = await Rider.findOne({ $or: [{ email: userName }, { mobile: userName }] })
     if (!result) {
