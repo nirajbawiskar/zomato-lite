@@ -1,4 +1,4 @@
-const { getAdminResturant, getAdminCustomer, getAdminOrder, registerAdminRider, getAdminRider, updateAdminRider, updateRiderAccount } = require("../controllers/admin.controller")
+const { getAdminResturant, getAdminCustomer , registerAdminRider, getAdminOrder, getAdminRider, updateAdminRider, updateRiderAccount,  } = require("../controllers/admin.controller")
 
 
 const router = require("express").Router()
