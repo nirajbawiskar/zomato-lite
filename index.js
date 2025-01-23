@@ -22,7 +22,7 @@ app.use("/api/customer", customerProtected, require("./routes/customer.routes"))
 app.use("/api/admin", adminProtected, require("./routes/admin.routes"))
 app.use("/api/rider", riderProtected, require("./routes/rider.routes"))
 app.use("*", (req, res) => {
-    res.sendFile(path.join(__dirname,"dist",index.html))
+    res.sendFile(path.join(__dirname,"dist","index.html"))
     // res.status(404).json({ message: "resource not found" })
 })
 app.use((err, req, res, next) => {
