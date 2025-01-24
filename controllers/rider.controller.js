@@ -1,6 +1,6 @@
 const asyncHandler = require("express-async-handler")
 const Order = require("./../models/Order")
-
+const {io} = require("../socket/socket")
 
 exports.getRiderOrders = asyncHandler(async (req, res) => {
    const result =  await Order
@@ -15,5 +15,6 @@ exports.getRiderOrders = asyncHandler(async (req, res) => {
 exports.updateOrdersStatus = asyncHandler(async (req, res) => {
   const{oid}=req.params
   const result = await Order.findByIdAndUpdate(oid,{ status: req.body.status })
+  io.emit("status-update")
     res.json({ message: "order status update success", result })
 })
