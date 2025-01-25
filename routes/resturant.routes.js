@@ -14,5 +14,5 @@ router
     
     .get("/get-orders", getResturantOrders)
     .put("/change-status/:oid", updateResturantStatus)
-    .get("/get-order-history", getHistory)
+    // .get("/get-order-history", getHistory)
     module.exports = router
