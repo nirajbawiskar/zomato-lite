@@ -1,4 +1,4 @@
-const { getLoaction, updateCustomerInfo, getAllResturant, getAllResturantMenu, placeOrder, getOrders, getHistory, } = require("../controllers/customer.controller")
+const { getLoaction, updateCustomerInfo, getAllResturant, getAllResturantMenu, placeOrder, getOrders, getHistory } = require("../controllers/customer.controller")
 
 const router = require("express").Router()
 
