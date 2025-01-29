@@ -13,6 +13,7 @@ router
     .get("/get-rider",getAdminRider)
     .put("/update-rider/:rid",updateAdminRider)
     .put("/update-rider-account/:rid",updateRiderAccount)
+    
     .get("/get-active-rider",getAdminActiveRider)
     .put("/assign-rider/:oid",assingRider)
 
